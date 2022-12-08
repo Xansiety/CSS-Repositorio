@@ -1,6 +1,14 @@
+/* Con este snippet al inicio podemos aplicar el box-sizing a todos los elementos del html */
+html {
+  box-sizing: border-box;
+}
+*, *:before,*:after {
+  box-sizing: inherit;
+}
+
 /* h1 {
   color: #000; */
-  /* color: rgb(83 , 85, 126, .5); */
+/* color: rgb(83 , 85, 126, .5); */
 /* } */
 
 /* aplica a todos los span dentro de h1 por ejemplo*/
@@ -16,7 +24,6 @@
 a {
   text-transform: lowercase;
 } */
- 
 
 /* SubSelectores nos ayudan a seleccionar un cierto elemento */
 /* nav a:first-child {
@@ -28,31 +35,29 @@ a {
   text-transform: uppercase;
   font-size: 50px;
 }*/
- 
+
 /*
 nav a:nth-child(3) {
   text-transform: uppercase;
   font-size: 50px;
 } */
 
-
 /* Pseudo selectores */
 /* !important no se recomienda usar pero se puede usar para que tenga la mayor prioridad */
 /* nav a { */
-  /* text-transform: uppercase!important;  */
-  /* text-transform: uppercase;  */
+/* text-transform: uppercase!important;  */
+/* text-transform: uppercase;  */
 /* } */
 
 /* las clases tiene mayor prioridad que las etiquetas y es mas recomendado usar esto sobre id */
 /* .navegacion a { 
   text-transform: lowercase;
 } */
- 
+
 /* los id tienen mayor peso */
 /* #navegacion a {
   text-transform: capitalize;
 } */
-
 
 /* .enlace {
   text-transform: uppercase;
@@ -72,8 +77,28 @@ nav a:nth-child(3) {
   font-weight: bold;
   text-decoration: none;
   color: #037bc0;
-} */ 
+} */
 
 .nombre-sitio span {
   color: #037bc0;
+}
+
+/* //! BoxModel - Se compone de estos 4 importantes elementos
+Contenido
+Padding
+Border
+Margin */
+
+.sobre-nosotros {
+  background-color: red;
+  width: 200px;
+  padding: 25px;
+  box-sizing: border-box; /* para que el padding no se salga del contenedor */
+}
+
+.sobre-empresa {
+  background-color: blue;
+  width: 500px;
+  padding: 100px;
+  box-sizing: border-box;
 }
