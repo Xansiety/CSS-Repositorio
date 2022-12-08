@@ -79,6 +79,15 @@ nav a:nth-child(3) {
   color: #037bc0;
 } */
 
+
+.nombre-sitio {
+  /* margin-top: 100px;
+  margin-bottom: 100px; */
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
 .nombre-sitio span {
   color: #037bc0;
 }
@@ -93,12 +102,15 @@ Margin */
   background-color: red;
   width: 200px;
   padding: 25px;
-  box-sizing: border-box; /* para que el padding no se salga del contenedor */
+   /*box-sizing: border-box; para que el padding no se salga del contenedor */
 }
 
 .sobre-empresa {
   background-color: blue;
   width: 500px;
   padding: 100px;
-  box-sizing: border-box;
+    /*box-sizing: border-box; para que el padding no se salga del contenedor */
 }
+
+/* Padding: Es el espacio que hay entre el contenido y el borde (hacia adentro del elemento)
+Margin: Es el espacio que hay entre el borde y el borde de otro elemento (Hacia afuera del elemento)*/
