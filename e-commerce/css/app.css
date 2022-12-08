@@ -1,20 +1,21 @@
-h1 {
-  color: #000;
+/* h1 {
+  color: #000; */
   /* color: rgb(83 , 85, 126, .5); */
-}
+/* } */
 
 /* aplica a todos los span dentro de h1 por ejemplo*/
-h1 span {
+/* h1 span {
   color: #037bc0;
-}
- 
-footer a {
+} */
+
+/* mayor especifidad, tiene mayor prioridad en el css */
+/* footer a {
   text-transform: uppercase;
 }
 
 a {
   text-transform: lowercase;
-}
+} */
  
 
 /* SubSelectores nos ayudan a seleccionar un cierto elemento */
@@ -33,3 +34,46 @@ nav a:nth-child(3) {
   text-transform: uppercase;
   font-size: 50px;
 } */
+
+
+/* Pseudo selectores */
+/* !important no se recomienda usar pero se puede usar para que tenga la mayor prioridad */
+/* nav a { */
+  /* text-transform: uppercase!important;  */
+  /* text-transform: uppercase;  */
+/* } */
+
+/* las clases tiene mayor prioridad que las etiquetas y es mas recomendado usar esto sobre id */
+/* .navegacion a { 
+  text-transform: lowercase;
+} */
+ 
+/* los id tienen mayor peso */
+/* #navegacion a {
+  text-transform: capitalize;
+} */
+
+
+/* .enlace {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: #037bc0;
+} */
+
+/* Tipos de escritura de CSS: Módulos, BEM, SMACSS */
+/* Módulos */
+/* .navegacion {
+  background-color: #e1e1e1;
+}
+
+.navegacion a {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: #037bc0;
+} */ 
+
+.nombre-sitio span {
+  color: #037bc0;
+}
