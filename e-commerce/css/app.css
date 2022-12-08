@@ -1,0 +1,35 @@
+h1 {
+  color: #000;
+  /* color: rgb(83 , 85, 126, .5); */
+}
+
+/* aplica a todos los span dentro de h1 por ejemplo*/
+h1 span {
+  color: #037bc0;
+}
+ 
+footer a {
+  text-transform: uppercase;
+}
+
+a {
+  text-transform: lowercase;
+}
+ 
+
+/* SubSelectores nos ayudan a seleccionar un cierto elemento */
+/* nav a:first-child {
+  text-transform: uppercase;
+  font-size: 50px;
+} */
+
+/* nav a:last-of-type {
+  text-transform: uppercase;
+  font-size: 50px;
+}*/
+ 
+/*
+nav a:nth-child(3) {
+  text-transform: uppercase;
+  font-size: 50px;
+} */
