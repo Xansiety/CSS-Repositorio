@@ -114,3 +114,26 @@ Margin */
 
 /* Padding: Es el espacio que hay entre el contenido y el borde (hacia adentro del elemento)
 Margin: Es el espacio que hay entre el borde y el borde de otro elemento (Hacia afuera del elemento)*/
+
+
+
+/* Display 
+Puede tener 3 valores: inline, block, inline-block
+block: un elemento se colocara por debajo de otro elemento sin importar su tamaño o contenido
+inline: un elemento se colocara del lado derecho una vez haya tomado el espacio que ocupa/requiere
+inline-block: Permite darle width, height, margin, padding lo que no es posible dárselos a un elemento inline */
+
+
+
+/* display inline y block */
+/* por ejemplo a no puede modificarse su width, height, margin, padding, etc. pero si se puede con display: inline-block;
+p si puede modificarse su width, height, margin, padding, etc. debido a que están con block */
+
+/* inline-block  */
+/* se puede modificar su width, height, margin, padding, etc.  */
+/* p {
+  background-color: red;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+} */
