@@ -5,129 +5,7 @@ html {
 *, *:before,*:after {
   box-sizing: inherit;
 }
-
-/* h1 {
-  color: #000; */
-/* color: rgb(83 , 85, 126, .5); */
-/* } */
-
-/* aplica a todos los span dentro de h1 por ejemplo*/
-/* h1 span {
-  color: #037bc0;
-} */
-
-/* mayor especifidad, tiene mayor prioridad en el css */
-/* footer a {
-  text-transform: uppercase;
-}
-
-a {
-  text-transform: lowercase;
-} */
-
-/* SubSelectores nos ayudan a seleccionar un cierto elemento */
-/* nav a:first-child {
-  text-transform: uppercase;
-  font-size: 50px;
-} */
-
-/* nav a:last-of-type {
-  text-transform: uppercase;
-  font-size: 50px;
-}*/
-
-/*
-nav a:nth-child(3) {
-  text-transform: uppercase;
-  font-size: 50px;
-} */
-
-/* Pseudo selectores */
-/* !important no se recomienda usar pero se puede usar para que tenga la mayor prioridad */
-/* nav a { */
-/* text-transform: uppercase!important;  */
-/* text-transform: uppercase;  */
-/* } */
-
-/* las clases tiene mayor prioridad que las etiquetas y es mas recomendado usar esto sobre id */
-/* .navegacion a { 
-  text-transform: lowercase;
-} */
-
-/* los id tienen mayor peso */
-/* #navegacion a {
-  text-transform: capitalize;
-} */
-
-/* .enlace {
-  text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: none;
-  color: #037bc0;
-} */
-
-/* Tipos de escritura de CSS: Módulos, BEM, SMACSS */
-/* Módulos */
-/* .navegacion {
-  background-color: #e1e1e1;
-}
-
-.navegacion a {
-  text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: none;
-  color: #037bc0;
-} */
-
  
-/* Padding: Es el espacio que hay entre el contenido y el borde (hacia adentro del elemento)
-Margin: Es el espacio que hay entre el borde y el borde de otro elemento (Hacia afuera del elemento)*/
-
-
-
-/* Display 
-Puede tener 3 valores: inline, block, inline-block
-block: un elemento se colocara por debajo de otro elemento sin importar su tamaño o contenido
-inline: un elemento se colocara del lado derecho una vez haya tomado el espacio que ocupa/requiere
-inline-block: Permite darle width, height, margin, padding lo que no es posible dárselos a un elemento inline */
-
-
-
-/* display inline y block */
-/* por ejemplo a no puede modificarse su width, height, margin, padding, etc. pero si se puede con display: inline-block;
-p si puede modificarse su width, height, margin, padding, etc. debido a que están con block */
-
-/* inline-block  */
-/* se puede modificar su width, height, margin, padding, etc.  */
-/* p {
-  background-color: red;
-  width: 200px;
-  height: 100px;
-  display: inline-block;
-} */
-
-
-/* //! BoxModel - Se compone de estos 4 importantes elementos
-Contenido
-Padding
-Border
-Margin */
-/* //! BoxModel */
-/* .sobre-nosotros {
-  background-color: red;
-  width: 200px;
-  padding: 25px;
-  /*box-sizing: border-box; para que el padding no se salga del contenedor 
-} */
-
-/* .sobre-empresa {
-  background-color: blue;
-  width: 500px;
-  padding: 100px;
-    /*box-sizing: border-box; para que el padding no se salga del contenedor 
-} */
-
-
 /** Globales **/
 a {
   text-decoration: none;
@@ -164,8 +42,15 @@ a {
   /* padding-top: 20px;
   padding-bottom: 20px; */
   /*margin: 100px 30px 100px 30px; */
-  border-top: 1px solid #e1e1e1; /* width, style/type, color */
+  /*border-top: 1px solid #e1e1e1; */ /* width, style/type, color */
   padding: 20px 0;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-start, flex-end, center, space-between, space-around, space-evenly */
+  justify-content: space-between ;
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* align-items: ; */ 
 }
  
 .hero {
