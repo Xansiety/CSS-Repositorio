@@ -1,20 +1,24 @@
 /* Con este snippet al inicio podemos aplicar el box-sizing a todos los elementos del html */
 html {
   box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 *, *:before,*:after {
   box-sizing: inherit;
 }
 
-
 body {
   font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
 }
  
 /** Globales **/
-
 h1 , h2 , h3  {
   font-family: 'Playfair Display', serif;
+}
+
+h3{
+  font-size: 3rem;
 }
 
 a {
@@ -23,22 +27,22 @@ a {
 }
  
 .contenedor {
-  max-width: 1200px; 
+  max-width: 120rem; /* 1200px */
   margin: 0 auto; /* 0 arriba y abajo, auto a los lados */
 }
 
-
 img {
   max-width: 100%;
-  display: block; /** para que las imagenes no generen el pequeño margen fuera de, cuando se aplica*/
+  display: block; /** para que las imágenes no generen el pequeño margen fuera de, cuando se aplica*/
 }
 
 
 /** Header y navegación **/
 .nombre-sitio {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center; 
+  font-size: 4rem;
   /* padding-top: 100px;
   padding-bottom: 100px; */
 }
@@ -48,7 +52,7 @@ img {
 }
 
 .contenedor-navegacion{
-  border-top: 1px solid #e1e1e1; /* width, style/type, color */
+  border-top: .1px solid #e1e1e1; /* width, style/type, color */
 }
 
 .nav-principal {
@@ -60,7 +64,7 @@ img {
   padding-bottom: 20px; */
   /*margin: 100px 30px 100px 30px; */
   /*border-top: 1px solid #e1e1e1; */ /* width, style/type, color */
-  padding: 20px 0;
+  padding: 2rem 0;
   display: flex;
   /* flex-direction: row; */
   /* flex-start, flex-end, center, space-between, space-around, space-evenly */
@@ -69,15 +73,12 @@ img {
   /* flex-direction: column; */
   /* align-items: ; */ 
 }
-
- 
-
-
+  
 .hero {
   background-image: url(../img/principal.jpg); /* url es para agregar una imagen */
   background-repeat: no-repeat; /* no-repeat para que no se repita la imagen */
   background-size: cover; /* cover para que la imagen se adapte al tamaño del contenedor */ 
-  height: 550px;
+  height: 55rem;
 }
 
 
@@ -92,8 +93,8 @@ img {
 .categoria a {
   display: block;
   text-align: center;
-  padding: 20px;
-  font-size: 20px;
+  padding: 2rem;
+  font-size: 2rem;
 }
 
 
@@ -101,8 +102,8 @@ img {
   background-color: #037bc0;
   color: #fff; 
   /* border-radius: 5px; */
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 30px;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 2rem;
 }
 
 
@@ -110,7 +111,7 @@ img {
 .listado-categorias{
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* repeat(3, 1fr) para que se repita 3 veces y que ocupe todo el espacio disponible */ 
-  gap: 20px; /* gap para separar los elementos */ 
+  gap: 2rem; /* gap para separar los elementos */ 
   /* grid-template-columns: repeat(4, 200px);  */
   /* grid-template-columns: 1fr 1fr;  */
   /* grid-template-columns: 200px 200px 200px 200px; */
