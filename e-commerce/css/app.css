@@ -17,6 +17,13 @@ a {
   margin: 0 auto; /* 0 arriba y abajo, auto a los lados */
 }
 
+
+img {
+  max-width: 100%;
+  display: block; /** para que las imagenes no generen el pequeño margen fuera de, cuando se aplica*/
+}
+
+
 /** Header y navegación **/
 .nombre-sitio {
   margin-top: 50px;
@@ -52,10 +59,52 @@ a {
   /* flex-direction: column; */
   /* align-items: ; */ 
 }
+
  
+
+
 .hero {
   background-image: url(../img/principal.jpg); /* url es para agregar una imagen */
   background-repeat: no-repeat; /* no-repeat para que no se repita la imagen */
   background-size: cover; /* cover para que la imagen se adapte al tamaño del contenedor */ 
   height: 550px;
+}
+
+
+/** categorias **/
+
+
+.categorias h2 {
+  text-align: center;
+}
+
+
+.categoria a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+
+.categoria a:hover {
+  background-color: #037bc0;
+  color: #fff; 
+  /* border-radius: 5px; */
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 30px;
+}
+
+
+
+.listado-categorias{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* repeat(3, 1fr) para que se repita 3 veces y que ocupe todo el espacio disponible */ 
+  gap: 20px; /* gap para separar los elementos */ 
+  /* grid-template-columns: repeat(4, 200px);  */
+  /* grid-template-columns: 1fr 1fr;  */
+  /* grid-template-columns: 200px 200px 200px 200px; */
+  /* grid-template-rows: 100px 100px; */
+  /* grid-template-rows: 1fr 1fr; */
+  /* height: 300px; */
 }
