@@ -23,8 +23,8 @@ h1 {
    font-size: 5rem;
 }
 
-h2 {
-  font-size: 3rem;
+h2 { 
+  font-size: 4rem;
 }
 
 h3{
@@ -45,8 +45,28 @@ img {
   max-width: 100%;
   display: block; /** para que las imágenes no generen el pequeño margen fuera de, cuando se aplica*/
 }
+ 
+.btn {
+  background-color: #8cbc00;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color .3s ease-out;
+}
 
+.btn:hover {
+  background-color: #6d8b12;
+  color: #fff;
+}
+  
+/** Utilidades **/
+.text-center {
+  text-align: center;
+}
 
+ 
 /** Header y navegación **/
 .nombre-sitio {
   margin-top: 5rem; /* 50px */
@@ -95,12 +115,7 @@ img {
 .categorias {
   padding-top: 5rem;
 }
-
-.categorias h2 {
-  text-align: center;
-}
-
-
+  
 .categoria a {
   display: block;
   text-align: center;
@@ -130,3 +145,182 @@ img {
   /* grid-template-rows: 1fr 1fr; */
   /* height: 300px; */
 }
+
+
+
+/** Bloque nostros **/
+.sobre-nosotros {
+  /* background-image: linear-gradient(to right, #000 50%, red 100% ); */
+  background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100% ), 
+  url(../img/nosotros.jpg);
+  padding: 10rem 0 10rem 0;
+  background-position: left center; 
+  background-repeat: no-repeat;
+  background-size: 100%, 100rem;
+}
+.sobre-nosotros-grid {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  column-gap: 5rem; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.texto-nosotros {
+  /* grid-column: 2 / 3; */   /* grid-column: 2 / 3; para que ocupe 2 columnas */
+  flex-basis: 50%; /*ancho del elemento*/
+  padding-left: 10rem;
+  color: #fff;
+}
+
+
+/** Bloque listado de productos **/
+
+.contenido-principal {
+padding-top: 5rem;
+}
+ 
+.listado-productos{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* column-gap: 2rem;
+  row-gap: 2rem; */
+  gap: 2rem;
+}
+ 
+.producto {
+  background-color: #037bc0;
+}
+
+.producto:nth-child(1){
+  /* grid-column: 1 / 7; */
+  grid-column-start: 1;
+  grid-column-end: 7;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+
+.producto:nth-child(1) img {
+  height: 43rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.producto:nth-child(2){
+   grid-column-start: 1 ;
+   grid-column-end: 4;
+}
+ 
+.producto:nth-child(3){
+  grid-column-start: 4 ;
+  grid-column-end: 7;
+}
+ 
+.producto:nth-child(2) img, 
+.producto:nth-child(3) img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+}
+ 
+
+.producto:nth-child(4){
+  grid-column-start: 1 ;
+  grid-column-end: 3;
+}
+
+.producto:nth-child(5){
+  grid-column-start: 3 ;
+  grid-column-end: 5;
+}
+
+
+.producto:nth-child(6){
+  grid-column-start: 5 ;
+  grid-column-end: 7;
+}
+
+
+.texto-producto{
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.texto-producto h3 {
+  margin: 0;
+}
+
+.texto-producto p {
+  margin: 0 0 .5rem 0;
+}
+
+.texto-producto .producto-precio{
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+ 
+/* .producto img {
+  transition: transform .3s ease-out;
+}
+
+.producto img:hover{
+  transform: scale(.8);
+} */
+
+
+/** Bloque footer **/
+/** Con Flexbox **/
+/* .site-footer {
+  border-top: 1px solid #000000;
+   margin-top: 5rem;
+   padding: 5rem 0; 
+}
+ 
+.grid-footer {
+  display: flex;
+  gap: 2rem;
+}
+
+.grid-footer div {
+  flex: 1;
+}
+
+.grid-footer div:nth-child(2) {
+  flex: 3;
+} */
+
+/** Con Grid **/
+.site-footer {
+  border-top: 1px solid #000000;
+   margin-top: 5rem;
+   padding: 5rem 0; 
+}
+
+.site-footer h3 {
+   margin-bottom: 1rem;
+}
+
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+ 
+.footer-menu a 
+{
+  display: block;
+}
+
+
+ .copyright {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;  
+}
+
+
+
