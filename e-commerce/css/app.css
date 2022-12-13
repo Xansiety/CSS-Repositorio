@@ -55,11 +55,13 @@ img {
   padding: 1rem;
   transition: background-color .3s ease-out;
   text-align: center;
+  border: none;
 }
 
 .btn:hover {
   background-color: #6d8b12;
   color: #fff;
+  cursor: pointer;
 }
   
 /** Utilidades **/
@@ -402,4 +404,56 @@ padding-top: 5rem;
   width: 40rem;
   height: 40rem;
   object-fit: cover;
+}
+
+
+/** PÁGINA CONTACTO **/ 
+
+.formulario {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.formulario fieldset {
+  border-color:  black;
+  border-width: 1px; 
+  margin-bottom: 2rem;
+}
+
+.formulario legend {
+  background-color: #005485;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+   padding: 1rem;
+   margin-bottom: 4rem;
+}
+ 
+.campo {
+  display: flex;
+  margin-bottom: 2rem; 
+}
+
+.campo label {
+  flex-basis: 10rem; /*va a medir 100%*/
+}
+
+/* .campo .input {
+  flex: 1 va a medir en base al factor de crecimiento 
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+} */
+
+/* .campo input[type="text"],
+.campo input[type="tel"], 
+.campo input[type="email"], */
+.campo input:not([type="radio"]),
+textarea,
+select
+{
+  flex: 1; /*va a medir en base al factor de crecimiento*/
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
 }
