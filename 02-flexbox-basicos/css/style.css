@@ -1,0 +1,377 @@
+:root {
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+}
+html {
+    font-size: 62.5%; /** 1REM = 10pX **/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+
+body {
+    background-color: var(--azul);
+    font-family:  'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 5rem 0;
+    padding: 1rem;
+}
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+.caja-curso h1 {
+    margin: 0;
+}
+.caja-curso p {
+    font-size: 2.4rem;
+}
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.box {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    border: 1rem solid #bb2b03;
+}
+/* .box:nth-child(2){
+    font-size: 1rem;
+    margin-top: 5rem;
+} */
+
+.contenedor > div {
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+
+
+/** 1.- Display Flex **/
+.d-flex {
+    display: flex;
+}
+
+/** 2.- Flex Direction **/
+.d-flex-row{
+    display: flex; 
+    flex-direction: row; 
+}
+.d-flex-row-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.d-flex-column{
+display: flex;
+flex-direction: column;
+}
+.d-flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/** 3.- Justify Content (Dirección Row) **/
+/* Con la dirección en wor podemos alinear los elementos de forma :horizontal */
+.d-flex-3-start {
+    display:flex;
+    justify-content: flex-start;
+    margin-bottom: 10rem;
+}
+
+.d-flex-3-end {
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom: 10rem;
+}
+
+.d-flex-3-center {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.d-flex-3-space-around {
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 10rem;
+}
+
+.d-flex-3-space-between {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+}
+
+.d-flex-3-space-evenly {
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom: 10rem;
+}
+
+/** 4.- Justify Content (Dirección Column) **/
+
+.d-flex-4-flex-start {
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: flex-start; 
+    margin-bottom: 50px;
+}
+
+.d-flex-4-flex-end {
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: flex-end; 
+    margin-bottom: 50px;
+}
+
+.d-flex-4-center {
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: center; 
+    margin-bottom: 50px;
+}
+
+.d-flex-4-space-evenly {
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: space-evenly; 
+    margin-bottom: 50px;
+}
+
+.d-flex-4-space-around {
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: space-around; 
+    margin-bottom: 50px;
+}
+
+.d-flex-4-space-between{
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: space-between; 
+    margin-bottom: 50px;
+}
+
+
+/** 5.- Align Items (Dirección Row) **/
+
+.d-flex-5-flex-start {
+    border: 1px solid black;
+    display: flex;
+    height: 300px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.d-flex-5-flex-end {
+    border: 1px solid black;
+    display: flex;
+    height: 300px;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.d-flex-5-stretch {
+    border: 1px solid black;
+    display: flex;
+    height: 300px;
+    align-items: stretch;
+    margin-bottom: 50px;
+}
+
+.d-flex-5-center {
+    border: 1px solid black;
+    display: flex;
+    height: 300px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.d-flex-5-baseline {
+    border: 1px solid black;
+    display: flex;
+    height: 300px;
+    align-items: baseline;
+    margin-bottom: 50px;
+}
+
+/** 6.- Align Items (Dirección Columna) **/
+.d-flex-6 {
+    border: 1px solid black;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-bottom: 50px;
+}
+
+/** 7.- Align Items y JustifyContent **/
+
+.d-flex-7-row {
+    border: 1px solid black;
+    margin-bottom: 50px;
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex-7-column {
+    border: 1px solid black;
+    margin-bottom: 50px;
+    display: flex; 
+    flex-direction: column;
+    height: 600px;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
+/** 8.- Flex Basis **/
+.d-flex-8 {  
+    display: flex; 
+}
+
+.d-flex-8 .box {
+    flex-basis: 33.3%;
+    flex-basis: 200px; /* Valor inicial y se ajusta al contenido*/
+}
+
+/** 9.- Gap y Calc **/
+.d-flex-9 {
+    display: flex; 
+    /*gap: 2rem;*/ /* Version mas reciente */
+    justify-content: space-between;
+}
+
+.d-flex-9 .box {
+     /* flex-basis: 33.3%; */ /* Compatible con GAP */
+     flex-basis: calc(33.3% - 1rem);
+}
+
+.d-flex-9-more-examples-gaps{
+    display: flex; 
+    justify-content: space-between;
+}
+.d-flex-9-more-examples-gaps .box:nth-child(1) {
+    flex-basis: calc(50% - 1rem);
+}
+
+.d-flex-9-more-examples-gaps .box:nth-child(2) ,
+.d-flex-9-more-examples-gaps .box:nth-child(3) {
+    flex-basis: calc(25% - 1rem);
+}
+
+
+/** 10.- Flex Wrap **/
+.d-flex-10 {
+    display: flex; 
+    flex-wrap: wrap; /* nowrap Valor por defecto */
+}
+
+.d-flex-10 .box {
+    flex-basis: 33.3%;  
+}
+
+/** 11.- Flex Grow **/
+.d-flex-11 {
+    display: flex;  
+}
+
+.d-flex-11 .box { 
+    flex-grow: 1; /*0 Valor por defecto, es el factor de crecimiento  y motivo por el cual se expanden de forma horizontal, es la cantidad de pixeles que se reparten*/
+}
+
+.d-flex-11-factor-crecimiento {
+    display: flex;  
+}
+
+.d-flex-11-factor-crecimiento .box:nth-child(1) { 
+    flex-grow: 3; /*0 Valor por defecto, es el factor de crecimiento  y motivo por el cual se expanden de forma horizontal, es la cantidad de pixeles que se reparten*/
+}
+
+.d-flex-11-factor-crecimiento .box:nth-child(2),
+.d-flex-11-factor-crecimiento .box:nth-child(3)  { 
+    flex-grow: 1; /*0 Valor por defecto, es el factor de crecimiento  y motivo por el cual se expanden de forma horizontal, es la cantidad de pixeles que se reparten*/
+}
+ 
+
+/** 12.- Flex Shrink **/    
+.d-flex-12 {
+    display: flex;  
+}
+
+.d-flex-12 .box {
+    flex-grow: 1;
+    flex-basis: 300px;
+    flex-shrink: 1;
+}
+
+.d-flex-12 .box:nth-child(3) {
+    flex-shrink: 2; /* 1 Valor por defecto, es el factor de reducción y motivo por el cual se reducen de forma horizontal, es la cantidad de pixeles que se reparten*/
+}
+
+
+/** 13.- Flex Shorthand - Utiliza los dos anteriores  **/
+.d-flex-13 {
+    display: flex;  
+}
+
+.d-flex-13 .box {
+    /* flex-basis: 33.3%;
+    flex-grow: 1;
+    flex-shrink: 0; */
+    flex: 1 0 33.3%; /* flex-grow flex-shrink flex-basis */
+}
+
+
+.d-flex-13-specific {
+    display: flex;  
+    /* justify-content: space-between; */
+    gap: 2rem;
+}
+
+.d-flex-13-specific .box {
+    /* flex: 0 0 calc(33.3% - 1rem);   */
+    flex-basis:  33.3%;
+}
+
+
+

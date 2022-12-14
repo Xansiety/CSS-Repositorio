@@ -457,3 +457,5 @@ select
   border: 1px solid #e1e1e1;
   padding: 1rem;
 }
+
+a[href^="#"] { background-color: gold; }

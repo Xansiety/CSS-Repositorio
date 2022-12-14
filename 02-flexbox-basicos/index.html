@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox - Básicos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="caja-curso">
+      <h1>CSS La Guía Completa - Flexbox, CSS Grid, SASS +20 proyectos</h1>
+      <p>- Juan De la torre @codigoconjuan</p>
+      <a
+        target="blank"
+        rel="nofollow noopener noreferrer"
+        href="https://codigoconjuan.com/"
+        >Vísita mi sitio Codigo Con Juan</a
+      >
+    </div>
+
+    <div class="contenedor">
+      <h2>1.- Display Flex</h2>
+
+      <div class="d-flex">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+
+      <h2>2.- Flex Direction</h2> 
+
+      <div class="container">
+        <caption>d-flex-row</caption>
+        <div class="d-flex-row">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+        <caption>d-flex-row-reverse</caption>
+        <div class="d-flex-row-reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <caption>d-flex-column</caption>
+        <div class="d-flex-column">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <caption>d-flex-column-reverse</caption>
+        <div class="d-flex-column-reverse">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+        </div>
+      </div> 
+
+      <h2>3.- Justify Content (Dirección Row)</h2>
+
+      <div class="container">
+            <caption> justify-content: start </caption>
+            <div class="d-flex-3-start">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div> 
+            <caption> justify-content: end </caption>
+            <div class="d-flex-3-end">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <caption> justify-content: center </caption>
+            <div class="d-flex-3-center">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <caption> justify-content: space-evenly </caption>
+            <div class="d-flex-3-space-evenly">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <caption> justify-content: space-around </caption>
+            <div class="d-flex-3-space-around">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <caption> justify-content: space-between </caption>
+            <div class="d-flex-3-space-between">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+        </div> 
+
+      <h2>4.- Justify Content (Dirección Column)</h2>
+
+      <div class="container">
+        <caption> justify-content: flex-start </caption>
+        <div class="d-flex-4-flex-start">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+
+          <caption> justify-content: flex-end </caption>
+          <div class="d-flex-4-flex-end">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+
+          <caption> justify-content: center </caption>
+          <div class="d-flex-4-center">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+
+          <caption> justify-content: space-evenly </caption>
+          <div class="d-flex-4-space-evenly">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+          <caption> justify-content: space-around </caption>
+          <div class="d-flex-4-space-around">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+          <caption> justify-content: space-between </caption>
+          <div class="d-flex-4-space-between">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+      </div>
+
+      <h2>5.- Align Items (Dirección Row)</h2>
+
+      <div class="container">
+         <caption> align-items: flex-start </caption>
+         <div class="d-flex-5-flex-start">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+
+          <caption> align-items: flex-end </caption>
+         <div class="d-flex-5-flex-end">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+
+          <caption> align-items: stretch</caption>
+          <div class="d-flex-5-stretch">
+             <div class="box">1</div>
+             <div class="box">2</div>
+             <div class="box">3</div>
+           </div>
+          
+           <caption> align-items: center</caption>
+          <div class="d-flex-5-center">
+             <div class="box">1</div>
+             <div class="box">2</div>
+             <div class="box">3</div>
+           </div>
+
+           <caption> align-items: baseline</caption>
+           <div class="d-flex-5-baseline">
+              <div class="box">1</div>
+              <div class="box">2</div>
+              <div class="box">3</div>
+            </div>
+      </div>
+
+      <h2>6.- Align Items (Dirección Columna)</h2>
+
+      <div class="container">
+        <caption> align-items: baseline</caption>
+        <div class="d-flex-6">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div> 
+      </div>
+
+      <h2>7.- Align Items y JustifyContent</h2>
+
+      <div class="container">
+          <div class="d-flex-7-row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+
+      <div class="d-flex-7-column">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+      </div>
+
+      <h2>8.- Flex Basis</h2>
+
+      <div class="d-flex-8">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">Contenido</div>
+      </div>
+
+      <h2>9.- Gap y Calc</h2>
+
+      <div class="d-flex-9">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+
+      <div class="d-flex-9-more-examples-gaps">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+
+
+      <h2>10.- Flex Wrap</h2>
+
+      <div class="d-flex-10">
+        <div class="box">1 Contenido</div>
+        <div class="box">2 Contenido</div>
+        <div class="box">3 Contenido</div>
+        <div class="box">4 Contenido</div>
+        <div class="box">5 Contenido</div>
+        <div class="box">6 Contenido</div>
+      </div>
+
+      <h2>11.- Flex Grow</h2>
+
+      <h3>Factor de crecimiento</h3>
+      <div class="d-flex-11">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+
+      <h3> Diferentes factores de crecimiento</h3>
+      <div class="d-flex-11-factor-crecimiento">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+
+      <h2>12.- Flex Shrink</h2>
+
+      <div class="d-flex-12">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+
+      <h2>13.- Flex Shorthand</h2>
+
+      <div class="d-flex-13">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+
+      <div class="d-flex-13-specific">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+
+    </div>
+  </body>
+</html>
