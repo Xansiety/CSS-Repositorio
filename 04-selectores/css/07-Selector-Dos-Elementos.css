@@ -1,0 +1,13 @@
+/* .texto {
+    border: 3px solid yellow;
+    padding: 2rem;
+} 
+.oferta {
+    border: 3px solid yellow;
+    padding: 2rem;
+} */ 
+.texto,
+.oferta {
+  border: 3px solid yellow;
+  padding: 2rem;
+}

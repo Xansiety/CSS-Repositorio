@@ -1,0 +1,13 @@
+.texto {
+    color: cornflowerblue
+}
+
+#encabezado {
+    text-transform: uppercase;
+    color: brown;
+    font-size: 2rem;
+}
+
+#encabezado.texto {
+    color: tomato;
+}

@@ -1,0 +1,20 @@
+a[href="http://www.google.com"]
+{
+  color: red;
+}
+
+/* Inicien con  */
+a[href^="https://"]
+{
+  color: #00f;
+}
+
+/* Finalicen con  */
+a[href$=".html"] {
+  color: green;
+}
+
+input[type="tel"]
+{
+  border: 5px solid red;
+}

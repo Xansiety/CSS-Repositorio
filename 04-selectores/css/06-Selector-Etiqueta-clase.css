@@ -1,0 +1,9 @@
+/* .texto {
+    background-color: yellow;
+} */
+
+div.texto {
+    background-color: teal;
+    color: azure;
+    text-transform: uppercase;
+}

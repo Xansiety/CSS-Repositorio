@@ -1,0 +1,4 @@
+/* Solo selecciona al primer nivel de hisjo, solo le aplica al primer hijo, es decir el primer div que tiene como hijo */
+.admin > div {
+    border: 2px solid red;
+}
