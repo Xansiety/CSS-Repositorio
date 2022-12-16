@@ -1,0 +1,266 @@
+:root {
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+}
+html {
+    font-size: 62.5%; /** 1REM = 10pX **/
+}
+
+body {
+    background-color: var(--azul);
+    font-family:  'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+.caja-curso h1 {
+    margin: 0;
+}
+.caja-curso p {
+    font-size: 2.4rem;
+}
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+
+h1, h2 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.box {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+/** 1.- Display Grid **/
+
+.grid-1 {
+    display: grid;
+}
+
+/** 2.- Grid Template Columns **/
+.grid-2 {
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+}
+
+.grid-2 .box:nth-child(2) {
+    /* grid-column-start:2 ;
+    grid-column-end:3 ; */
+    grid-column: 1 / 2;
+}
+
+
+/** 3.- Grid Template Rows **/
+.grid-3 {
+    display: grid; 
+    grid-template-rows: repeat(2, 300px);
+    grid-template-columns:  repeat(3, 1fr);
+}
+
+.grid-3 .box:nth-child(2) {
+    grid-row: 1 / 2;
+}
+
+
+/** 4.- Span **/
+.grid-4 {
+    display: grid; 
+    grid-template-rows: repeat(2, 300px);
+    grid-template-columns:  repeat(3, 1fr);
+}
+ 
+.grid-4 .box:nth-child(2) {
+    /* grid-column-start: 3;
+    grid-column-end: 4; */
+    /* grid-column: 3/4;
+    grid-row: 2/3 ; */
+    background-color: cornflowerblue;
+    grid-column: 2/4; /** Tomar mas de dos columnas **/
+    grid-row: 1/ span 2; /** Tomar mas de dos filas **/
+}
+
+
+/** 5.- Grid Shorthand **/
+.grid-5 {
+    display: grid; 
+    /* grid-template-rows: repeat(2, 300px);
+    grid-template-columns:  repeat(3, 1fr); */
+    grid: repeat(2, 300px) / repeat(3, 1fr); /** Rows / Columns **/
+}
+
+
+/** 6.- Grid Autoflow **/
+.grid-6 {
+    display: grid; 
+    grid: repeat(2, 300px) / repeat(3, 1fr); /** Rows / Columns **/
+    grid-auto-flow: column; /** Llena los espacios en blanco, valores aceptados: row, column, dense, row dense **/
+}
+
+.grid-6 .box:nth-child(2) {
+     grid-column: 1 / 2;
+}
+
+
+/** 7.- Grid Fr y Grid Repeat **/
+.grid-7 {
+    display: grid; 
+    grid-template-columns: 2fr repeat(2, 1fr);
+}
+
+
+.grid-7-more {
+    display: grid;  
+    height: 500px; /** Es necesario para que los fr de rows funcionen **/
+    grid: repeat(2, 1fr) / repeat(3, 1fr); /** Rows / Columns **/
+}
+
+
+
+/** 8.- Grid Gap **/
+.grid-8 {
+    display: grid; 
+    grid: repeat(2, 20rem) / repeat(3, 1fr);  
+    /* column-gap: 4rem;
+    row-gap: 4rem; */
+    gap: 4rem 2rem; /** Es un shorthand de column-gap y row-gap **/
+}
+
+.grid-8 .box {
+    margin: 0;
+}
+
+
+
+/** 9.- Grid Areas **/
+.grid-9 {
+    display: grid;
+    height: 120rem;
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "contenido contenido sidebar"
+                         "footer footer footer";
+                        ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2.5fr 1fr 6fr 1.5fr;
+    gap: 2rem; 
+}
+
+.grid-9 .box {
+    margin: 0;
+}
+
+.grid-9 .box:nth-child(1) {
+    grid-area: header;
+}
+
+.grid-9 .box:nth-child(2) {
+    grid-area: nav;
+}
+
+.grid-9 .box:nth-child(3) {
+    grid-area: contenido;
+}
+
+.grid-9 .box:nth-child(4) {
+    grid-area: sidebar;
+}
+
+.grid-9 .box:nth-child(5) {
+    grid-area: footer;
+}
+
+
+/** 10.- Grid Template **/
+.grid-10 {
+    display: grid;
+    height: 120rem;
+    grid-template: "header header header" 2.5fr 
+                    "nav nav nav" 1fr 
+                    "contenido contenido sidebar" 6fr
+                    "footer footer footer" 1.5fr /  1fr 1fr 1fr; /** primero se dibujan los rows junto a su tamaño de row, / y luego las columnas junto a su tamaño de columnas **/
+    gap: 2rem; 
+}
+
+.grid-10 .box {
+    margin: 0;
+}
+
+.grid-10 .box:nth-child(1) {
+    grid-area: header;
+}
+
+.grid-10 .box:nth-child(2) {
+    grid-area: nav;
+}
+
+.grid-10 .box:nth-child(3) {
+    grid-area: contenido;
+}
+
+.grid-10 .box:nth-child(4) {
+    grid-area: sidebar;
+}
+
+.grid-10 .box:nth-child(5) {
+    grid-area: footer;
+}
+ 
+
+
+/** 11.- Alineación Grid **/
+
+.grid-11 {
+    border: red 2px solid;
+    display: grid;  
+    grid-template-columns: repeat(6, 1fr); 
+    height: 400px;
+    /* align-items: flex-end; */
+    place-content: flex-end; 
+}
+
+.grid-11 .box {
+    margin: 0;
+}
+
+
+/** 12.- Grid Autofill y Autofit **/
+
+.grid-12 {
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, 20rem); /** auto-fill: rellena los espacios en blanco con el tamaño de la caja, auto-fit: rellena los espacios en blanco con el tamaño de la caja, pero no deja espacios en blanco **/
+    grid-template-columns: repeat(auto-fit, 20rem); /** auto-fill: rellena los espacios en blanco con el tamaño de la caja, auto-fit: rellena los espacios en blanco con el tamaño de la caja, pero no deja espacios en blanco **/
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));  
+    column-gap: 2rem;
+}
+
+
+.grid-12 .box {
+    margin: 0;
+}
