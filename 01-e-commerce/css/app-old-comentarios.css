@@ -1,0 +1,461 @@
+/* Con este snippet al inicio podemos aplicar el box-sizing a todos los elementos del html */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+*, *:before,*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5; /** interlineado */
+}
+ 
+/** Globales **/
+h1 , h2 , h3  {
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 5rem 0;
+}
+
+h1 {
+   font-size: 5rem;
+}
+
+h2 { 
+  font-size: 4rem;
+}
+
+h3{
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+ 
+.contenedor {
+  max-width: 120rem; /* 1200px */
+  margin: 0 auto; /* 0 arriba y abajo, auto a los lados */
+}
+
+img {
+  max-width: 100%;
+  display: block; /** para que las imágenes no generen el pequeño margen fuera de, cuando se aplica*/
+}
+ 
+.btn {
+  background-color: #8cbc00;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color .3s ease-out;
+  text-align: center;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #6d8b12;
+  color: #fff;
+  cursor: pointer;
+}
+  
+/** Utilidades **/
+.text-center {
+  text-align: center;
+}
+
+.max-width-30 {
+  max-width: 30rem;
+}
+
+ 
+/** Header y navegación **/
+.nombre-sitio {
+  margin-top: 5rem; /* 50px */
+  text-align: center;  
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+}
+
+.nombre-sitio span {
+  color: #037bc0;
+}
+
+.contenedor-navegacion{
+  border-top: .1px solid #e1e1e1; /* width, style/type, color */
+}
+
+.nav-principal {
+  /* border-color: #e1e1e1;
+  border-top-style: solid;
+  border-width: 1px; */
+  /* padding: 50px 0 30px 20px;  top, right, bottom, left */  
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  /*margin: 100px 30px 100px 30px; */
+  /*border-top: 1px solid #e1e1e1; */ /* width, style/type, color */
+  padding: 2rem 0;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-start, flex-end, center, space-between, space-around, space-evenly */
+  justify-content: space-between ;
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* align-items: ; */ 
+}
+  
+.hero {
+  background-image: url(../img/principal.jpg); /* url es para agregar una imagen */
+  background-repeat: no-repeat; /* no-repeat para que no se repita la imagen */
+  background-size: cover; /* cover para que la imagen se adapte al tamaño del contenedor */ 
+  background-position: center center; /* center center para que la imagen se centre en el contenedor */
+  height: 55rem;
+}
+
+
+/** categorias **/
+.categorias {
+  padding-top: 5rem;
+}
+  
+.categoria a {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+
+.categoria a:hover {
+  background-color: #037bc0;
+  color: #fff; 
+  /* border-radius: 5px; */
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 2rem;
+}
+
+
+
+.listado-categorias{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* repeat(3, 1fr) para que se repita 3 veces y que ocupe todo el espacio disponible */ 
+  gap: 2rem; /* gap para separar los elementos */ 
+  /* grid-template-columns: repeat(4, 200px);  */
+  /* grid-template-columns: 1fr 1fr;  */
+  /* grid-template-columns: 200px 200px 200px 200px; */
+  /* grid-template-rows: 100px 100px; */
+  /* grid-template-rows: 1fr 1fr; */
+  /* height: 300px; */
+}
+
+
+
+/** Bloque nostros **/
+.sobre-nosotros {
+  /* background-image: linear-gradient(to right, #000 50%, red 100% ); */
+  background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100% ), 
+  url(../img/nosotros.jpg);
+  padding: 10rem 0 10rem 0;
+  background-position: left center; 
+  background-repeat: no-repeat;
+  background-size: 100%, 100rem;
+}
+.sobre-nosotros-grid {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  column-gap: 5rem; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.texto-nosotros {
+  /* grid-column: 2 / 3; */   /* grid-column: 2 / 3; para que ocupe 2 columnas */
+  flex-basis: 50%; /*ancho del elemento*/
+  padding-left: 10rem;
+  color: #fff;
+}
+
+
+/** Bloque listado de productos **/
+
+.contenido-principal {
+padding-top: 5rem;
+}
+ 
+.listado-productos{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* column-gap: 2rem;
+  row-gap: 2rem; */
+  gap: 2rem;
+}
+ 
+.producto {
+  background-color: #037bc0;
+}
+
+.producto:nth-child(1){
+  /* grid-column: 1 / 7; */
+  grid-column-start: 1;
+  grid-column-end: 7;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+
+.producto:nth-child(1) img {
+  height: 43rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.producto:nth-child(2){
+   grid-column-start: 1 ;
+   grid-column-end: 4;
+}
+ 
+.producto:nth-child(3){
+  grid-column-start: 4 ;
+  grid-column-end: 7;
+}
+ 
+.producto:nth-child(2) img, 
+.producto:nth-child(3) img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+}
+ 
+
+.producto:nth-child(4){
+  grid-column-start: 1 ;
+  grid-column-end: 3;
+}
+
+.producto:nth-child(5){
+  grid-column-start: 3 ;
+  grid-column-end: 5;
+}
+
+
+.producto:nth-child(6){
+  grid-column-start: 5 ;
+  grid-column-end: 7;
+}
+
+
+.texto-producto{
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.texto-producto h3 {
+  margin: 0;
+}
+
+.texto-producto p {
+  margin: 0 0 .5rem 0;
+}
+
+.texto-producto .producto-precio{
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+ 
+/* .producto img {
+  transition: transform .3s ease-out;
+}
+
+.producto img:hover{
+  transform: scale(.8);
+} */
+
+
+/** Bloque footer **/
+/** Con Flexbox **/
+/* .site-footer {
+  border-top: 1px solid #000000;
+   margin-top: 5rem;
+   padding: 5rem 0; 
+}
+ 
+.grid-footer {
+  display: flex;
+  gap: 2rem;
+}
+
+.grid-footer div {
+  flex: 1;
+}
+
+.grid-footer div:nth-child(2) {
+  flex: 3;
+} */
+
+/** Con Grid **/
+.site-footer {
+  border-top: 1px solid #000000;
+   margin-top: 5rem;
+   padding: 5rem 0; 
+}
+
+.site-footer h3 {
+   margin-bottom: 1rem;
+}
+
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+ 
+.footer-menu a 
+{
+  display: block;
+}
+
+
+ .copyright {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;  
+}
+
+
+
+
+
+/** PÁGINA NOSOTROS **/
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 4rem;
+}
+
+
+.informacion-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+/** PÁGINA BLOG **/
+.contenedor-blog {
+  display: grid; 
+  grid-template-columns: 2fr 1fr;
+  column-gap: 4rem;
+}
+
+.entrada {
+  border-bottom: 2px solid #e1e1e1;
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.entrada-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.entrada-meta p {
+  font-weight: 700;
+}
+
+.entrada-meta span {
+  color: #037bc0;
+}
+
+.contenido-entrada-blog {
+  width: 60rem ;
+  margin: 0 auto;
+}
+
+
+/** PÁGINA GALERÍA **/
+
+.galeria {
+  list-style: none;
+   padding: 0;
+   margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.galeria img {
+  width: 40rem;
+  height: 40rem;
+  object-fit: cover;
+}
+
+
+/** PÁGINA CONTACTO **/ 
+
+.formulario {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.formulario fieldset {
+  border-color:  black;
+  border-width: 1px; 
+  margin-bottom: 2rem;
+}
+
+.formulario legend {
+  background-color: #005485;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+   padding: 1rem;
+   margin-bottom: 4rem;
+}
+ 
+.campo {
+  display: flex;
+  margin-bottom: 2rem; 
+}
+
+.campo label {
+  flex-basis: 10rem; /*va a medir 100%*/
+}
+
+/* .campo .input {
+  flex: 1 va a medir en base al factor de crecimiento 
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+} */
+
+/* .campo input[type="text"],
+.campo input[type="tel"], 
+.campo input[type="email"], */
+.campo input:not([type="radio"]),
+textarea,
+select
+{
+  flex: 1; /*va a medir en base al factor de crecimiento*/
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+}
+
+a[href^="#"] { background-color: gold; }
