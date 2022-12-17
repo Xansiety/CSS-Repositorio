@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="01-Primeros-Media-Queries.css">
+    <link rel="stylesheet" href="02-Mobile-First.css">
+    <link rel="stylesheet" href="03-DesktopFirst.css">
+    <link rel="stylesheet" href="04-MediaQueries-Entre-2-Tamanios.css">
+    <link rel="stylesheet" href="05-Shorthand-MediaQueries.css">
+    <link rel="stylesheet" href="06-Tamanios-Estandard.css">
+    <link rel="stylesheet" href="css/07-Contenedores-Responsive.css">
+    <link rel="stylesheet" href="css/08-Columnas-Responsive-Flexbox.css">
+    <link rel="stylesheet" href="css/09-Columnas-Responsive-Grid.css">
+    <link rel="stylesheet" href="css/10-Imagenes-Responsive.css">
+    <link rel="stylesheet" href="css/11-Formatos-Modernos.css">
+    <link rel="stylesheet" href="css/12-Formatos-Modernos-SRC-SET.css"> 
+</head>
+<body>
+
+    <div class="caja-curso">
+        <h1>CSS La Guía Completa - Flexbox, CSS Grid, SASS +20 proyectos</h1>
+        <p>- Juan De la torre @codigoconjuan</p>
+        <a target="blank" rel="nofollow noopener noreferrer"  href="https://codigoconjuan.com/">Vísita mi sitio Codigo Con Juan</a>
+    </div>
+
+    <div class="contenedor">
+
+        <h2>Primeros Pasos con Media Queries</h2>
+
+        <div class="oferta">
+            <p class="precio">$20 Descuento</p>
+            <p class="texto">Utiliza el cupón: 20OFF al pagar</p>
+        </div>
+
+         <h2>Mobile First</h2>
+
+        <div class="oferta">
+            <p class="precio">$20 Descuento</p>
+            <p class="texto">Utiliza el cupón: 20OFF al pagar</p>
+        </div>
+
+       <h2>Desktop First</h2>
+
+        <div class="oferta">
+            <p class="precio">$20 Descuento</p>
+            <p class="texto">Utiliza el cupón: 20OFF al pagar</p>
+        </div>
+
+        <h2>Media Queries entre 2 tamaños</h2>
+        <div class="oferta">
+            <p class="precio">$20 Descuento</p>
+            <p class="texto">Utiliza el cupón: 20OFF al pagar</p>
+        </div>
+
+        <h2>Shorthand para Media Queries</h2>
+
+        <h2>Tamaños estándar</h2> -->
+
+       <h2>Contenedores Responsive</h2>
+
+        <div class="contenedor-responsive">
+            
+        </div>
+
+        <h2>3 Columnas Responsive Flexbox</h2>
+
+        <div class="tres-columnas-flex">
+            <div class="columna">1</div>
+            <div class="columna">2</div>
+            <div class="columna">3</div>
+        </div>
+
+        <h2>3 Columnas Responsive Grid</h2>
+
+        <div class="tres-columnas-grid">
+            <div class="columna">1</div>
+            <div class="columna">2</div>
+            <div class="columna">3</div>
+        </div>
+
+        <h2>Imágenes Responsive</h2> -->
+        <img src="img/imagen.jpg" alt="imagen responsive" >
+        <!-- <!-- <img src="img/imagen.webp" alt="imagen responsive" > -->
+        
+        <h2>Formatos Modernos</h2> -->
+        <picture>
+            <source srcset="img/imagen.avif" type="image/avif">
+            <source srcset="img/imagen.webp" type="image/webp">
+            <img loading="lazy" src="img/imagen.jpg" alt="imagen responsive" >
+        </picture>
+ 
+        <!-- Se crea snippet presionando img + tab  -->
+
+
+        <h2>Formatos Modernos con SRC SET</h2>
+        
+        <picture>
+            <source
+                sizes="1920w, 1280w, 640w"
+                srcset="img/imagen.avif 1920w, img/imagen-100.avif 1280w, img/imagen-700.avif 640w"
+                type="image/avif"
+            > 
+            <source
+                sizes="1920w, 1280w, 640w"
+                srcset="img/imagen.webp 1920w, img/imagen-100.webp 1280w, img/imagen-700.webp 640w"
+                type="image/webp">
+
+            <source
+                sizes="1920w, 1280w, 640w"
+                srcset="img/imagen.jpg 1920w, img/imagen-100.jpg 1280w, img/imagen-700.jpg 640w"
+                type="image/jpeg">
+
+            <img loading="lazy" src="img/imagen.jpg" alt="imagen responsive" >
+        </picture> 
+    </div>
+
+</body>
+</html>

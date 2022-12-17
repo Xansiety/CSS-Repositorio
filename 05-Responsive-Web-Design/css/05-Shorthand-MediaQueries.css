@@ -1,0 +1,12 @@
+ Se crea snippet para media queries
+ "media query": {
+    "prefix": "media",
+    "body": [
+        "@media (min-width: ${1:600}px) {",
+        "  .${2:class} {",
+        "    $3 ",
+        "  }",
+        "}" 
+    ],
+    "description": "Snippet para crear Media query"
+},

@@ -1,0 +1,5 @@
+img {
+    max-width: 100%;  /* NUNCA VA A CRECER MAS QUE SU TAMAÑO ORIGINAL */
+    display: block;
+}
+ 
