@@ -1,5 +1,10 @@
 $color: blue;
+$color2: yellow;
 
 body {
     background-color: $color;
+}
+
+h1 {
+    color: $color2; 
 }

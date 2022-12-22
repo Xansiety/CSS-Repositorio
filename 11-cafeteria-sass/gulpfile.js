@@ -1,5 +1,5 @@
 
-const { src, dest } = require('gulp');
+const { src, dest , watch} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 
 function css(done) {
@@ -12,4 +12,10 @@ function css(done) {
         done();
 }
 
+function dev() {
+    // watch revisar si hay cambios en el archivo, si hay cambios ejecutar la función css
+    watch('src/scss/app.scss', css); //(archivo a vigilar, función a ejecutar)
+}
+
 exports.css = css;
+exports.dev = dev;
