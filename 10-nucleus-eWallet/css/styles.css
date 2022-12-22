@@ -163,6 +163,10 @@ img {
   }
 }
 
+.navegacion__link--blanco{
+  color: var(--blanco);
+}
+
 /** Nucleus Section **/
 
 .nucleus {
@@ -303,3 +307,81 @@ img {
 }
 
 
+/** Bloque testimoniales **/
+.testimoniales{
+  background-color: var(--primario);
+  padding: 5rem 0;
+}
+
+.testimoniales__heading {
+  color: var(--blanco);
+}
+
+.testimoniales__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem; 
+}
+ 
+@media (min-width: 768px) {
+  .testimoniales__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.testimonial {
+  background-color: var(--blanco);
+  box-shadow: 0px 0px 15px 3px rgba(0 0 0 / .15);
+  padding: 2rem;
+  position: relative;
+}
+
+.testimonial__texto {
+   padding-left: 4rem;
+}
+.testimonial__texto::before {
+  content: "";
+  background-image: url(../img/comilla.png); 
+  background-size: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.testimonial__autor {
+  color: var(--primario);
+  font-weight: 700;
+  text-align: right;
+}
+
+.testimonial__autor::before {
+  content: "—"; 
+}
+
+/** Bloque Footer **/
+.footer {
+  background-color: #5a30a0;
+  padding: 3rem 0; 
+}
+ 
+@media (min-width: 768px) {
+  .footer__grid {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  }
+}
+
+.footer__logo {
+  width: 20rem;
+  margin: 0 auto 4rem auto;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    margin: 0;
+  }
+}
