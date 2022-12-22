@@ -1,0 +1,16 @@
+{
+  "name": "11-cafeteria-sass",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS-GULP, CSS, Grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xansiety",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.57.1"
+  }
+}
