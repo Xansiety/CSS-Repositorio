@@ -18,7 +18,9 @@ function css(done) {
 
 function dev() {
     // watch revisar si hay cambios en el archivo, si hay cambios ejecutar la función css
-    watch('src/scss/app.scss', css); //(archivo a vigilar, función a ejecutar)
+    //watch('src/scss/header/_header.scss', css); //(archivo a vigilar, función a ejecutar)
+    //watch('src/scss/app.scss', css); //(archivo a vigilar, función a ejecutar)
+    watch('src/scss/**/*.scss', css); //(archivo a vigilar, función a ejecutar)
 }
 
 // se llaman solo ejecutando desde la terminal "gulp"

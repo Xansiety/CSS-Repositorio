@@ -1,15 +1,15 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  background-color: blue;
+}
+
 body {
   background-color: rgb(7, 7, 224);
   font-size: 4rem;
   display: flex;
   gap: 2rem;
-}
-
-h1 {
-  color: rgb(84, 134, 130);
-}
-
-div {
-  display: grid;
-  grid-template-columns: 3rem;
 }
