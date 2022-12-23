@@ -1,13 +1,1 @@
-// @import 'header/header';
-@use 'header/header';
-@use 'header/navegacion';
-
-$color: rgb(7, 7, 224);
-$color2: rgb(84, 134, 130);
-
-body {
-    background-color: $color;
-    font-size: 4rem;
-    display: flex;
-    gap: 2rem;
-} 
+@use 'base'
