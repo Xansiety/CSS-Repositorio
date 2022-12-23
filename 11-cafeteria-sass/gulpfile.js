@@ -7,7 +7,8 @@ const autoprefixer = require('autoprefixer');
 
 // Imagenes
 const imagemin = require('gulp-imagemin');
-
+const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
 // En sass({ outputStyle: 'compressed' }) para que el css se minifique
 function css(done) {
@@ -16,8 +17,7 @@ function css(done) {
     src('src/scss/app.scss') //1
         .pipe( sass() ) //2
         .pipe( postcss([autoprefixer()]) ) //2
-        .pipe( dest('build/css') ); //3
-
+        .pipe( dest('build/css') ); //3 
         done();
 }
 
@@ -31,6 +31,24 @@ function imagenes(done)
     done();
 }
 
+function versionWebp(done)
+{
+    src('src/img/**/*.{jpg,png}')
+        .pipe( webp() )
+        .pipe( dest('build/img') ); 
+    done();
+}
+
+
+function versionAvif(done){
+    const opciones = {
+        quality: 50,  // 0 - 100
+    }
+    src('src/img/**/*.{jpg,png}')
+        .pipe( avif(opciones) )
+        .pipe( dest('build/img') ); 
+    done();
+}
 
 function dev() {
     // watch revisar si hay cambios en el archivo, si hay cambios ejecutar la función css
@@ -49,9 +67,11 @@ function tareaDefault(done) {
 exports.css = css;
 exports.dev = dev;
 exports.imagenes = imagenes;
+exports.versionWebp = versionWebp;
+exports.versionAvif = versionAvif;
 // Default task
 // exports.default = tareaDefault;
 // Series -> Se inicia una tarea, cuando termina se inicia la siguiente
-exports.default = series(imagenes, css, dev);
+exports.default = series(imagenes, versionWebp, versionAvif, css, dev);
 // Parallel -> Se inician las tareas al mismo tiempo
 // exports.default = parallel(css, dev);

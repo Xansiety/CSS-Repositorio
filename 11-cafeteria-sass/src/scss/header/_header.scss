@@ -1,5 +1,14 @@
 @use 'base/variables' as v;
 
 .header {
-    color: v.$negro
+    padding: 5rem 0; 
+
+    .contenido-header {
+        
+    }
+}
+
+// header de cada pagina
+.header-inicio {
+    background-image: url(../img/header_inicio.jpg); 
 }
