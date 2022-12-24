@@ -8,13 +8,15 @@ html {
 } 
 
 body {
-    font-family: v.$fuente_principal;
+    font-family: v.$fuente_secundaria;
     font-size: 1.6rem;
+    background-color: v.$cafeClaro;
 }
 
 p {
     color: v.$negro;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 2;
 }
 
 .contenedor {
@@ -32,20 +34,8 @@ img {
     display: block;
 }
 
-
-h1, h2, h3 {
-    margin: 0 0 v.$separacion 0; 
-}
-
-
-h1 {
-    font-size: 4rem;
-}
-
-h2 {
-    font-size: 3.6rem;
-}
-
-h3 {
-    font-size: 3.2rem;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }

@@ -320,11 +320,13 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  background-color: #ebe7de;
 }
 
 p {
   color: #000;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 .contenedor {
@@ -342,8 +344,18 @@ img {
   display: block;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
   margin: 0 0 5rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
 }
 
 h1 {
@@ -352,6 +364,22 @@ h1 {
 
 h2 {
   font-size: 3.6rem;
+  color: #53311E;
+}
+h2 span {
+  color: #C39C63;
+  font-size: 1.8rem;
+  display: block;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-image: url("../img/cafe.svg");
+  background-size: 10rem;
+  background-repeat: no-repeat;
 }
 
 h3 {
@@ -456,4 +484,38 @@ h3 {
     width: 20rem;
     margin: 0;
   }
+}
+
+.contenido-principal {
+  position: relative;
+  background-color: #fff;
+  padding: 5rem 2rem;
+}
+@media (min-width: 768px) {
+  .contenido-principal {
+    padding: 10rem;
+    margin-top: -10rem;
+  }
+}
+
+.iconos {
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .iconos .listado-iconos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+}
+.iconos .listado-iconos li img {
+  margin: 0 auto;
+  width: 12rem;
+}
+.iconos .listado-iconos li p {
+  font-family: "Bona Nova", serif;
+  font-size: 3.2rem;
+  color: #53311E;
 }
