@@ -4,10 +4,10 @@
 .header {
     padding: 5rem 0; 
     position: relative; 
-
-    @include m.telefono{
-        padding: 3rem 0;
-    };
+    @include m.tablet { 
+          min-height: 70rem;
+    }
+   
 
     &::before {
         content: '';
@@ -21,6 +21,17 @@
     } 
     .contenido-header {
          position: relative; //para traer el contenido del header hacia adelante
+
+         h1 {
+            margin-top: 4rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: v.$blanco;
+            @include m.tablet { 
+                margin-top: 10rem;
+            }
+         }
+         
     }
 }
 
