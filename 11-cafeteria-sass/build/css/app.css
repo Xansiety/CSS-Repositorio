@@ -370,6 +370,11 @@ h3 {
   padding: 5rem 0;
   position: relative;
 }
+@media (min-width: 480px) {
+  .header {
+    padding: 3rem 0;
+  }
+}
 .header::before {
   content: "";
   background-color: #000;

@@ -1,8 +1,13 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .header {
     padding: 5rem 0; 
-    position: relative;
+    position: relative; 
+
+    @include m.telefono{
+        padding: 3rem 0;
+    };
 
     &::before {
         content: '';
