@@ -350,7 +350,7 @@ ul {
   padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2, .heading-blanco, h3 {
   font-family: "Raleway", sans-serif;
   margin: 0 0 5rem 0;
   text-transform: uppercase;
@@ -362,16 +362,16 @@ h1 {
   font-size: 4rem;
 }
 
-h2 {
+h2, .heading-blanco {
   font-size: 3.6rem;
   color: #53311E;
 }
-h2 span {
+h2 span, .heading-blanco span {
   color: #C39C63;
   font-size: 1.8rem;
   display: block;
 }
-h2::after {
+h2::after, .heading-blanco::after {
   content: "";
   display: block;
   width: 10rem;
@@ -380,6 +380,16 @@ h2::after {
   background-image: url("../img/cafe.svg");
   background-size: 10rem;
   background-repeat: no-repeat;
+}
+
+.heading-blanco {
+  color: #fff;
+}
+.heading-blanco span {
+  color: #fff;
+}
+.heading-blanco::after {
+  display: none;
 }
 
 h3 {
@@ -609,4 +619,55 @@ h3 {
     -o-object-position: center;
        object-position: center;
   }
+}
+
+.nuestro-menu {
+  background-image: url("../img/menu_arriba.svg"), url("../img/menu_abajo.svg"), linear-gradient(to top, #53311E, #53311E);
+  background-repeat: no-repeat;
+  background-position: center 5rem, center 92%, 100%;
+  background-size: 200%;
+  padding: 15rem 2rem 20rem 2rem;
+}
+@media (min-width: 768px) {
+  .nuestro-menu {
+    padding: 15rem 0 20rem 0;
+    background-size: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .nuestro-menu {
+    padding: 15rem 0 20rem 0;
+    background-size: 50%, 50%, 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.menu h3 {
+  color: #fff;
+}
+.menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu li p {
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+}
+.menu li p span {
+  display: block;
+  color: #C39C63;
+}
+.menu li .precio {
+  font-size: 2.8rem;
+  font-weight: 700;
 }
