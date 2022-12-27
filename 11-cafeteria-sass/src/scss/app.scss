@@ -3,5 +3,8 @@
 @use 'inicio';
 @use 'footer';
 
-//nosotros
+//Paginas del sitio
 @use 'internas';
+
+//Utilidades para renderizar hasta el final
+@use 'utilidades';

@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use '../base/variables' as v;
 
 .text-center {
     text-align: center;
@@ -14,4 +14,8 @@
 
 .margin-negativo-10 {
     margin-top: -10rem;
+}
+
+.padding-bottom-0 {
+    padding-bottom: 0;
 }
