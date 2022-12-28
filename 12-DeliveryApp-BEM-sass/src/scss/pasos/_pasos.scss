@@ -1,13 +1,11 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-
 .pasos {
     margin-top: 2rem;
 
-    &__wave {
-
-    }
+    // &__wave { 
+    // }
 
     &__contenido {
         margin-top: -1px;
