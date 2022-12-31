@@ -10,7 +10,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300,400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
 </head>
-<body>
+<body> 
 
+    <header class="header">
+        <div class="barra contenedor">
+                <div class="barra__logo">
+                    <p class="barra__nombre">AirBNB</p>
+                </div>
+
+                <nav class="barra__navegacion">
+                    <a href="#" class="barra__enlace">Lugares para hospedarte</a>
+                    <a href="#" class="barra__enlace">Experiencias</a>
+                    <a href="#" class="barra__enlace">Experiencias en lineas</a> 
+                </nav>
+
+                <nav class="barra__login">
+                    <a href="#" class="barra__enlace">Hazte anfitrión</a> 
+                </nav> 
+        </div>
+
+        <form action="#" class="formulario contenedor">
+            <div class="formulario__campo">
+                <label for="ubicacion" class="formulario__label">Ubicación</label>
+                <input type="text" id="ubicacion" class="formulario__input" placeholder="¿A donde viajas?">
+            </div>
+            <div class="formulario__campo">
+                <label for="llegada" class="formulario__label">Llegada</label>
+                <input type="date" id="llegada" class="formulario__input">
+            </div>
+            <div class="formulario__campo">
+                <label for="salida" class="formulario__label">Salida</label>
+                <input type="date" id="salida" class="formulario__input">
+            </div>
+            <div class="formulario__campo">
+                <label for="huespedes" class="formulario__label">Huéspedes</label>
+                <input type="number" id="huespedes" class="formulario__input" min="1" placeholder="¿Cuantos?">
+            </div>
+            <div class="formulario__campo">
+                <input type="submit" value="Buscar" class="formulario__submit">
+            </div>
+        </form>
+
+        <div class="header__busqueda contenedor">
+            <p class="header__busqueda-label">¿No sabes a donde ir?</p>
+            <a href="" class="header__busqueda-boton">Búsqueda flexible</a>
+        </div>
+
+    </header>
 </body>
 </html>

@@ -1,0 +1,32 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.barra {
+   display: none;
+   @include m.tablet { 
+     display: flex; 
+     justify-content: space-between;
+     align-items: center;
+   }
+
+   &__navegacion {
+    display: flex;
+    gap: 4rem;
+   }
+   &__enlace {
+        color: v.$blanco;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 700; 
+        &:last-of-type {
+        margin-right: 0;
+        }
+   }
+   &__nombre {
+        color: v.$blanco; 
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+   }
+
+}

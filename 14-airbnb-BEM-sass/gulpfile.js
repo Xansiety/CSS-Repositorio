@@ -48,7 +48,7 @@ function versionAvif() {
 
 function dev() {
     watch( 'src/scss/**/*.scss', css );
-    watch( 'src/img/**/*', imagenes );
+    // watch( 'src/img/**/*', imagenes );
 }
 
 
