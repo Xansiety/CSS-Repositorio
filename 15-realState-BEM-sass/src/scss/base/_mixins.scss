@@ -52,10 +52,13 @@
 }
 
 
-@mixin heading{
+@mixin heading($salto: false){
     font-weight: 400;
     span {
-        font-weight: 700;
+        font-weight: 700; 
+        @if $salto {
+            display: block;
+        }
     }
     ::after {
         content: "";

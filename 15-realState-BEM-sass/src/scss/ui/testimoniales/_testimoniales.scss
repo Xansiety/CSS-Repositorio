@@ -1,0 +1,85 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.testimoniales-blog {
+    margin-top: 5rem;
+    @include m.desktop { 
+        @include m.grid(3, 4rem);
+    } 
+    &__blog{
+        @include m.desktop { 
+            grid-column: 2 / 4;
+        } 
+    }
+    &__heading {
+        @include m.heading(true);
+    }
+}
+
+.testimonial {
+    text-align: center;
+    &__imagen {
+        width: 20rem;
+        margin: 0 auto;
+    }
+    &__contenido {
+        background-color: v.$blanco;
+        margin-top: -10rem;
+        padding: 10rem 2rem 2rem 2rem;
+    }
+    &__nombre {
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+    &__texto{
+        &::before {
+            content: "";
+            background-image: url("../img/quote.svg"); 
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            width: 4rem;
+            height: 4rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+
+.entrada {
+    background-color: v.$blanco;
+    margin-bottom: 2rem;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    @include m.tablet { 
+        @include m.grid(5, 2rem);
+        align-items: center;
+    } 
+    &__imagen-contenedor { 
+        @include m.tablet { 
+            grid-column: 1 / 3;
+        } 
+    }
+    &__imagen {
+        height: 30rem;
+        object-fit: cover;
+        width: 100%;
+    }
+    &__contenido {
+        padding: 1rem;
+        @include m.tablet { 
+            grid-column: 3 / 6;
+        } 
+    }
+    &__meta {
+        font-size: 1.4rem;
+    }
+    &__enlace {
+        @include m.boton(v.$primario, v.$blanco);
+        display: block;
+        @include m.tablet { 
+              display: inline-block;
+        }
+    }
+}
