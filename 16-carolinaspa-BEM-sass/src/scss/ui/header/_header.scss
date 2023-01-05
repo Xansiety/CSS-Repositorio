@@ -1,0 +1,14 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    padding-top: 5rem;
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        @include m.tablet { 
+             flex-direction: row; 
+             justify-content: space-between;
+        }
+    }
+}

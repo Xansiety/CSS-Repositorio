@@ -1,0 +1,48 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.sociales {
+    display: flex;
+    margin: 5rem 0;
+    @include m.tablet { 
+        margin: 0;  
+    }
+
+    &__enlace{ 
+        &::before {
+            content: "";
+            padding: 2rem; 
+            display: inline-block;
+        }
+        // [*] que contenga en cualquier parte de la cadena de texto la palabra "facebook", 
+        // [$] que finalice con la palabra "facebook", 
+        // [^] que empiece con la palabra "facebook"
+        &[href*="facebook.com"]::before {
+             background-image: url(../img/icono_facebook.svg);
+        }
+        &[href*="twitter.com"]::before {
+            background-image: url(../img/icono_twitter.svg);
+        }
+        &[href*="instagram.com"]::before {
+            background-image: url(../img/icono_instagram.svg);
+        }
+        &[href*="youtube.com"]::before {
+            background-image: url(../img/icono_youtube.svg);
+        }
+        &[href*="tiktok.com"]::before {
+            background-image: url(../img/icono_tiktok.svg);
+        } 
+    }
+
+    &__accesible {
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        display: block;
+    }
+}
