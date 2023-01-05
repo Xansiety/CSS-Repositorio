@@ -66,4 +66,10 @@
 }
 
 // Headings mixing normal font
+@mixin heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+}
 
