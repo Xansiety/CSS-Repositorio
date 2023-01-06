@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
   <body>
@@ -50,17 +54,17 @@
         </nav>
       </div>
     </div>
-
-    <section class="slider">
+ 
+    <section class="slider contenedor">
       <ul class="slider__contenedor">
-        <!-- <li class="slider__slide">
-                <img src="build/img/slide_01.jpg" alt="Imagen slide">
-            </li>
-            <li class="slider__slide">
-                <img src="build/img/slide_02.jpg" alt="Imagen slide">
-            </li> -->
         <li class="slider__slide">
-          <img src="build/img/slide_03.jpg" alt="Imagen slide" />
+          <img class="slider__imagen" src="build/img/slide_01.jpg" alt="Imagen slide" />
+        </li>
+        <li class="slider__slide">
+          <img class="slider__imagen" src="build/img/slide_02.jpg" alt="Imagen slide" />
+        </li>
+        <li class="slider__slide">
+          <img class="slider__imagen" src="build/img/slide_03.jpg" alt="Imagen slide" />
         </li>
       </ul>
     </section>
@@ -175,98 +179,139 @@
       <h2 class="productos__heading">Nuestros <span>productos</span></h2>
       <div class="productos__grid">
         <div class="producto">
-          <div class="producto__mask"> 
-            <img src="build/img/producto_01.jpg" alt="imagen producto" class="producto__imagen">
+          <div class="producto__mask">
+            <img
+              src="build/img/producto_01.jpg"
+              alt="imagen producto"
+              class="producto__imagen"
+            />
           </div>
           <div class="producto__contenido">
-            <h3 class="producto__nombre">Producto 1</h3> 
-            <p class="producto__descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam.</p>
+            <h3 class="producto__nombre">Producto 1</h3>
+            <p class="producto__descripcion">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam.
+            </p>
             <p class="producto__precio">$25</p>
           </div>
-        </div> <!--Producto -->
+        </div>
+        <!--Producto -->
 
         <div class="producto">
-          <div class="producto__mask"> 
-            <img src="build/img/producto_02.jpg" alt="imagen producto" class="producto__imagen">
+          <div class="producto__mask">
+            <img
+              src="build/img/producto_02.jpg"
+              alt="imagen producto"
+              class="producto__imagen"
+            />
           </div>
           <div class="producto__contenido">
-            <h3 class="producto__nombre">Producto 2</h3> 
-            <p class="producto__descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam.</p>
+            <h3 class="producto__nombre">Producto 2</h3>
+            <p class="producto__descripcion">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam.
+            </p>
             <p class="producto__precio">$25</p>
           </div>
-        </div> <!--Producto -->
+        </div>
+        <!--Producto -->
 
         <div class="producto">
-          <div class="producto__mask"> 
-            <img src="build/img/producto_03.jpg" alt="imagen producto" class="producto__imagen">
+          <div class="producto__mask">
+            <img
+              src="build/img/producto_03.jpg"
+              alt="imagen producto"
+              class="producto__imagen"
+            />
           </div>
           <div class="producto__contenido">
-            <h3 class="producto__nombre">Producto 3</h3> 
-            <p class="producto__descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam.</p>
+            <h3 class="producto__nombre">Producto 3</h3>
+            <p class="producto__descripcion">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam.
+            </p>
             <p class="producto__precio">$25</p>
           </div>
-        </div> <!--Producto -->
+        </div>
+        <!--Producto -->
 
         <div class="producto">
-          <div class="producto__mask"> 
-            <img src="build/img/producto_04.jpg" alt="imagen producto" class="producto__imagen">
+          <div class="producto__mask">
+            <img
+              src="build/img/producto_04.jpg"
+              alt="imagen producto"
+              class="producto__imagen"
+            />
           </div>
           <div class="producto__contenido">
-            <h3 class="producto__nombre">Producto 4</h3> 
-            <p class="producto__descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam.</p>
+            <h3 class="producto__nombre">Producto 4</h3>
+            <p class="producto__descripcion">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam.
+            </p>
             <p class="producto__precio">$25</p>
           </div>
-        </div> <!--Producto -->
+        </div>
+        <!--Producto -->
       </div>
     </main>
 
     <section class="cita">
       <h2 class="cita__heading">Realiza una cita</h2>
-      <p class="cita__texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste beatae obcaecati est cupiditate, modi corporis accusantium. Quidem quibusdam iusto amet laudantium. Porro optio inventore laudantium.</p>
+      <p class="cita__texto">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste beatae
+        obcaecati est cupiditate, modi corporis accusantium. Quidem quibusdam
+        iusto amet laudantium. Porro optio inventore laudantium.
+      </p>
       <a href="#" class="cita__enlace">Leer más</a>
     </section>
 
-
     <footer class="footer">
       <div class="footer__grid contenedor">
-          <div class="footer__widget">
-              <h3 class="footer__heading">Nosotros</h3>
-              <p class="footer__texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita cum, minus atque harum maxime reprehenderit fugiat sed corrupti inventore tempora quisquam provident aut facere ipsum pariatur, esse velit blanditiis quae!</p>
-          </div>
+        <div class="footer__widget">
+          <h3 class="footer__heading">Nosotros</h3>
+          <p class="footer__texto">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            cum, minus atque harum maxime reprehenderit fugiat sed corrupti
+            inventore tempora quisquam provident aut facere ipsum pariatur, esse
+            velit blanditiis quae!
+          </p>
+        </div>
 
-          <div class="footer__widget">
-              <h3 class="footer__heading">Horario</h3>
-              <p class="footer__texto">Lun-Vie: 9AM - 7PM</p>
-              <p class="footer__texto">Sábado: 9AM - 2PM</p>
-              <p class="footer__texto">Domingo: Cerrado</p>
-          </div>
+        <div class="footer__widget">
+          <h3 class="footer__heading">Horario</h3>
+          <p class="footer__texto">Lun-Vie: 9AM - 7PM</p>
+          <p class="footer__texto">Sábado: 9AM - 2PM</p>
+          <p class="footer__texto">Domingo: Cerrado</p>
+        </div>
 
-          <div class="footer__widget">
-              <h3 class="footer__heading">Contacto</h3>
-              <p class="footer__texto">Av. Revolución 1818</p>
+        <div class="footer__widget">
+          <h3 class="footer__heading">Contacto</h3>
+          <p class="footer__texto">Av. Revolución 1818</p>
 
-              <nav class="sociales">
-                  <a class="sociales__enlace" href="https://facebook.com/carolinaspa">
-                      <span class="sociales__accesible">Facebook</span>
-                  </a>
-                  <a class="sociales__enlace" href="https://twitter.com">
-                      <span class="sociales__accesible">Twitter</span>
-                  </a>
-                  <a class="sociales__enlace" href="https://instagram.com">
-                      <span class="sociales__accesible">Instagram</span>
-                  </a>
-                  <a class="sociales__enlace" href="https://youtube.com">
-                      <span class="sociales__accesible">YouTube</span>
-                  </a>
-                  <a class="sociales__enlace" href="https://tiktok.com">
-                      <span class="sociales__accesible">TikTok</span>
-                  </a>
-              </nav>
-          </div>
+          <nav class="sociales">
+            <a class="sociales__enlace" href="https://facebook.com/carolinaspa">
+              <span class="sociales__accesible">Facebook</span>
+            </a>
+            <a class="sociales__enlace" href="https://twitter.com">
+              <span class="sociales__accesible">Twitter</span>
+            </a>
+            <a class="sociales__enlace" href="https://instagram.com">
+              <span class="sociales__accesible">Instagram</span>
+            </a>
+            <a class="sociales__enlace" href="https://youtube.com">
+              <span class="sociales__accesible">YouTube</span>
+            </a>
+            <a class="sociales__enlace" href="https://tiktok.com">
+              <span class="sociales__accesible">TikTok</span>
+            </a>
+          </nav>
+        </div>
       </div>
 
-      <p class="footer__copyright">Carolina Spa & Salon. Todos los derechos reservados</p>
-  </footer>
+      <p class="footer__copyright">
+        Carolina Spa & Salon. Todos los derechos reservados
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./src/js/app.js"></script>
 
   </body>
 </html>

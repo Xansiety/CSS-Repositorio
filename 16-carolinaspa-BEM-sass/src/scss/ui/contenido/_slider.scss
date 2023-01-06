@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+
+.slider {
+    overflow: hidden;
+    position: relative;
+
+    &__slide{
+        height: 100%;
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+        transition-property: transform;
+    }
+    &__imagen{
+        width: 100%; 
+    } 
+}

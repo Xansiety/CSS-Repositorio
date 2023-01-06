@@ -4,7 +4,8 @@
 
 .sociales {
     display: flex;
-    margin: 5rem 0;
+    margin: 5rem auto;
+    align-items: center;
     @include m.tablet { 
         margin: 0;  
     }
