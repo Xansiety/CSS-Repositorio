@@ -5,9 +5,7 @@
     background-color: v.$grisClaro;
     padding: 5rem 0;
     &__heading{
-        text-align: center;
-        margin: 0;
-        color: v.$gris;
+        @include m.heading;
     }
 }
 
